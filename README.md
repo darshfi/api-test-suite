@@ -1,6 +1,6 @@
 # API Test Suite
 
-A automated API testing suite built with **Python** and **pytest** to validate the REST endpoints of the [JSONPlaceholder](https://jsonplaceholder.typicode.com) mock API.
+An automated API testing suite built with **Python** and **pytest** to validate the REST endpoints of the [JSONPlaceholder](https://jsonplaceholder.typicode.com) mock API.
 
 ## Features
 - **Structured Framework:** Uses pytest object-oriented test patterns (`TestPostsApi`).
