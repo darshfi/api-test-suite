@@ -18,7 +18,7 @@ class TestPostsApi:
         response = session.get(f"{base_url}/posts/1")
         assert response.status_code == 200
         post = response.json()
-        assert id in post
+        assert "id" in post
         assert "title" in post
         assert "body" in post
         assert "userId" in post
@@ -54,9 +54,9 @@ class TestPostsApi:
         assert updated["body"] == payload["body"]
 
     def test_delete_post(self, session, base_url):
-        """DELETE /posts/1 should return 204"""
+        """DELETE /posts/1 should return 200"""
         response = session.delete(f"{base_url}/posts/1")
-        assert response.status_code == 204
+        assert response.status_code == 200
 
     @pytest.mark.parametrize("post_id", [1, 5, 10, 50, 100])
     def test_multiple_posts_have_valid_schema(self, session, base_url, post_id):
